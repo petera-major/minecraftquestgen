@@ -1,4 +1,3 @@
-# Logs
 logs
 *.log
 npm-debug.log*
@@ -12,8 +11,9 @@ dist
 dist-ssr
 *.local
 src/firebase.js
+.env
 
-# Editor directories and files
+
 .vscode/*
 !.vscode/extensions.json
 .idea
