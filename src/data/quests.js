@@ -1,51 +1,113 @@
 export const quests = {
-    moderate: [
-      { id: "1", title: "Build a Shelter", description: "Create a small house with a door, roof, and windows.", next: ["2"] },
-      { id: "2", title: "Gather Resources", description: "Mine 10 iron and collect 20 logs.", next: ["3", "4"] },
+  moderate: [
+    { id: "1", title: "First Shelter", description: "Build a temporary shelter before nightfall.", next: ["2"] },
+    { id: "2", title: "Stone Age", description: "Craft full stone tools.", next: ["3"] },
+    { id: "3", title: "Hunter Gatherer", description: "Kill an animal and cook food.", next: ["4"] },
+    { id: "4", title: "Warmth & Light", description: "Craft torches or lanterns.", next: ["5"] },
   
-      { id: "3", title: "Build a Farm", description: "Plant wheat, potatoes, and carrots.", next: ["5"] },
-      { id: "5", title: "Tame a Pet", description: "Tame a wolf, cat, or horse to accompany you.", next: ["7"] },
-      { id: "7", title: "Visit a Village", description: "Find a village and trade with a villager.", next: ["9"] },
-      { id: "9", title: "Expand Your Base", description: "Add two extra rooms or a storage area to your house.", next: ["11"] },
-      { id: "11", title: "Decorate with Style", description: "Use banners, flower pots, and paintings to beautify your home.", next: ["13"] },
-      { id: "13", title: "Build a Fishing Dock", description: "Create a dock and catch at least three different fish.", next: ["15"] },
-      { id: "15", title: "Create an Animal Pen", description: "Breed and contain cows, sheep, or pigs.", next: ["17"] },
-      { id: "17", title: "Build an Enchanting Room", description: "Craft an enchanting table and bookshelves.", next: ["19"] },
-      { id: "19", title: "Become a Master Builder", description: "Add lighting, fences, and creative touches around your base.", next: [] },
+    { id: "5", title: "Woodworker", description: "Craft a crafting table and wooden storage.", next: ["6"] },
+    { id: "6", title: "Dig Deep", description: "Mine iron.", next: ["7"] },
+    { id: "7", title: "Iron Age", description: "Craft iron tools.", next: ["8"] },
+    { id: "8", title: "Leather Worker", description: "Craft armor from leather or hide.", next: ["9"] },
   
-      { id: "4", title: "Explore a Cave", description: "Find diamonds or lapis lazuli underground.", next: ["6"] },
-      { id: "6", title: "Enter the Nether", description: "Build a portal and step into the Nether!", next: ["8"] },
-      { id: "8", title: "Find a Fortress", description: "Locate a Nether Fortress and defeat a Blaze.", next: ["10"] },
-      { id: "10", title: "Craft Potions", description: "Brew healing or fire resistance potions.", next: ["12"] },
-      { id: "12", title: "Locate the Stronghold", description: "Use Eyes of Ender to find the End Portal.", next: ["14"] },
-      { id: "14", title: "Defeat the Ender Dragon", description: "Destroy the End crystals and defeat the Dragon.", next: ["16"] },
-      { id: "16", title: "Return Home", description: "Collect the Dragon Egg and place it as a trophy.", next: ["18"] },
-      { id: "18", title: "Explore the End City", description: "Find an Elytra in an End City and fly home!", next: ["20"] },
-      { id: "20", title: "The Peaceful Master", description: "Complete your world with harmony — all quests done!", next: [] },
-    ],
+    { id: "9", title: "Homestead", description: "Build a permanent base.", next: ["10"] },
+    { id: "10", title: "Water Source", description: "Create a water well or stream near base.", next: ["11"] },
+    { id: "11", title: "Farmer’s Life", description: "Plant wheat or crops.", next: ["12"] },
+    { id: "12", title: "Prepare for Winter", description: "Store at least 2 stacks of food.", next: ["13"] },
   
-    hardcore: [
-      { id: "1", title: "Survive the First Night", description: "No shelter, no problem — last until sunrise.", next: ["2"] },
-      { id: "2", title: "Craft Iron Armor", description: "Mine enough iron to craft a full armor set.", next: ["3", "4"] },
+    { id: "13", title: "Explorer", description: "Discover a new biome.", next: ["14"] },
+    { id: "14", title: "Village Scout", description: "Locate a village.", next: ["15"] },
+    { id: "15", title: "Trader", description: "Complete a trade.", next: ["16"] },
   
-      { id: "3", title: "Build a Redstone Farm", description: "Automate one crop using Redstone.", next: ["5"] },
-      { id: "5", title: "Create a Hidden Door", description: "Use pistons and levers to make a secret passage.", next: ["7"] },
-      { id: "7", title: "Build a Mob Grinder", description: "Construct a farm that collects mob drops.", next: ["9"] },
-      { id: "9", title: "Craft Beacon Power", description: "Defeat the Wither and activate a beacon.", next: ["11"] },
-      { id: "11", title: "Fully Automate Resources", description: "Automate at least 3 different materials (iron, wool, food).", next: ["13"] },
-      { id: "13", title: "Construct a Mega Base", description: "Build a large Redstone-powered base.", next: ["15"] },
-      { id: "15", title: "Master Redstone Logic", description: "Design a working elevator or trap system.", next: ["17"] },
-      { id: "17", title: "Engineer’s Triumph", description: "Finish a complex contraption successfully.", next: [] },
+    { id: "16", title: "Animal Tamer", description: "Tame an animal.", next: ["17"] },
+    { id: "17", title: "Breeder", description: "Breed two animals.", next: ["18"] },
   
-      { id: "4", title: "Defeat the Ender Dragon", description: "Prepare potions and enchanted gear, then conquer the End.", next: ["6"] },
-      { id: "6", title: "Enter the Nether", description: "Find Blaze rods and Nether Wart for brewing.", next: ["8"] },
-      { id: "8", title: "Raid a Bastion", description: "Defeat Piglins and collect gold blocks.", next: ["10"] },
-      { id: "10", title: "Fight the Wither", description: "Summon and slay the Wither Boss.", next: ["12"] },
-      { id: "12", title: "Defeat the Warden", description: "Find an Ancient City and survive the Warden’s fury.", next: ["14"] },
-      { id: "14", title: "Complete a Raid", description: "Trigger and survive a full Pillager Raid.", next: ["16"] },
-      { id: "16", title: "Obtain Elytra", description: "Raid an End City and bring back an Elytra.", next: ["18"] },
-      { id: "18", title: "Hardcore Collector", description: "Gather every unique armor piece in survival.", next: ["20"] },
-      { id: "20", title: "The Ultimate Survivor", description: "Survive 100 in-game days without dying once.", next: [] },
-    ],
+    { id: "18", title: "Cave Dweller", description: "Explore a deep cave.", next: ["19"] },
+    { id: "19", title: "Rare Ores", description: "Mine diamonds or special ores.", next: ["20"] },
+    { id: "20", title: "Enchanting", description: "Build an enchantment table.", next: ["21"] },
+  
+    { id: "21", title: "Nether Gateway", description: "Build a Nether portal.", next: ["22"] },
+    { id: "22", title: "Survive the Nether", description: "Explore safely.", next: ["23"] },
+    { id: "23", title: "Fortress Hunter", description: "Find a Nether Fortress.", next: ["24"] },
+    { id: "24", title: "Potion Brewer", description: "Create potions.", next: ["25"] },
+  
+    { id: "25", title: "Eyes of Truth", description: "Craft Eyes of Ender.", next: ["26"] },
+    { id: "26", title: "Stronghold", description: "Find the End portal.", next: ["27"] },
+    { id: "27", title: "Dragon Slayer", description: "Defeat Ender Dragon.", next: ["28"] },
+  
+    { id: "28", title: "Sky Warrior", description: "Find Elytra.", next: ["29"] },
+    { id: "29", title: "Wings Master", description: "Fly using Elytra.", next: ["30"] },
+    { id: "30", title: "Dragon Egg", description: "Collect Dragon Egg.", next: ["31"] },
+  
+    { id: "31", title: "Return Home", description: "Display dragon trophy.", next: ["32"] },
+    { id: "32", title: "Base Expansion", description: "Add an advanced room.", next: ["33"] },
+    { id: "33", title: "Decoration", description: "Beautify base.", next: ["34"] },
+  
+    { id: "34", title: "Fishing Life", description: "Catch rare fish.", next: ["35"] },
+    { id: "35", title: "Explorer II", description: "Visit another biome.", next: ["36"] },
+    { id: "36", title: "Map Maker", description: "Craft map room.", next: ["37"] },
+  
+    { id: "37", title: "Elite Gear", description: "Fully enchanted armor.", next: ["38"] },
+    { id: "38", title: "Animal Kingdom", description: "Build pens for animals.", next: ["39"] },
+    { id: "39", title: "Lighting The World", description: "Light your base area.", next: ["40"] },
+    { id: "40", title: "Moderate Champion", description: "All quests complete.", next: [] },
+  ]
+  ,
+  
+  hardcore: [
+    { id: "1", title: "Cold Start", description: "Survive first night with no shelter.", next: ["2"] },
+    { id: "2", title: "Hand Tools", description: "Craft with no crafting table first.", next: ["3"] },
+    { id: "3", title: "Primitive Weapons", description: "Craft real weapons.", next: ["4"] },
+    { id: "4", title: "Weak Armor", description: "Survive in leather or hide.", next: ["5"] },
+  
+    { id: "5", title: "Deep Miner", description: "Mine iron at night.", next: ["6"] },
+    { id: "6", title: "Iron Defense", description: "Craft iron armor.", next: ["7"] },
+    { id: "7", title: "Hunger Games", description: "Never starve for a day.", next: ["8"] },
+    { id: "8", title: "Blood Moon", description: "Survive extreme event.", next: ["9"] },
+  
+    { id: "9", title: "Nomad", description: "Build temporary camp.", next: ["10"] },
+    { id: "10", title: "Village Savior", description: "Protect village.", next: ["11"] },
+    { id: "11", title: "Beast Tamer", description: "Tame predator.", next: ["12"] },
+  
+    { id: "12", title: "Cursed Cave", description: "Loot deadly cave.", next: ["13"] },
+    { id: "13", title: "Advanced Gear", description: "Craft rare items.", next: ["14"] },
+    { id: "14", title: "Enchant Master", description: "High-tier enchantments.", next: ["15"] },
+  
+    { id: "15", title: "Fire World", description: "Enter Nether.", next: ["16"] },
+    { id: "16", title: "Blaze Hunter", description: "Collect blaze rods.", next: ["17"] },
+    { id: "17", title: "Potion Master", description: "Make advanced potions.", next: ["18"] },
+  
+    { id: "18", title: "Bastion Breaker", description: "Defeat Piglin fortress.", next: ["19"] },
+    { id: "19", title: "Wither Curse", description: "Summon Wither.", next: ["20"] },
+    { id: "20", title: "Wither Slayer", description: "Defeat Wither.", next: ["21"] },
+  
+    { id: "21", title: "Beacon Power", description: "Activate beacon.", next: ["22"] },
+    { id: "22", title: "Ancient City", description: "Find Warden city.", next: ["23"] },
+    { id: "23", title: "Warden Hunter", description: "Defeat or escape Warden.", next: ["24"] },
+  
+    { id: "24", title: "Elite Builder", description: "Build mega base.", next: ["25"] },
+    { id: "25", title: "Redstone Brain", description: "Create automation.", next: ["26"] },
+  
+    { id: "26", title: "Dragon War", description: "Fight Ender Dragon.", next: ["27"] },
+    { id: "27", title: "Sky Breaker", description: "Get Elytra.", next: ["28"] },
+  
+    { id: "28", title: "End City Raider", description: "Loot End City.", next: ["29"] },
+    { id: "29", title: "Hardcore Flight", description: "Master Elytra.", next: ["30"] },
+  
+    { id: "30", title: "Collector", description: "Obtain rare armor.", next: ["31"] },
+    { id: "31", title: "Legendary Blade", description: "Craft ultimate weapon.", next: ["32"] },
+    { id: "32", title: "Final Home", description: "Build elite headquarters.", next: ["33"] },
+  
+    { id: "33", title: "War Preparation", description: "Prepare final gear.", next: ["34"] },
+    { id: "34", title: "Monster Hunter", description: "Kill dangerous mobs.", next: ["35"] },
+    { id: "35", title: "Extreme Survival", description: "Survive winter event.", next: ["36"] },
+  
+    { id: "36", title: "Master Alchemist", description: "Max potions.", next: ["37"] },
+    { id: "37", title: "Engineer King", description: "Complex machine.", next: ["38"] },
+    { id: "38", title: "World Dominator", description: "Remove major threats.", next: ["39"] },
+    { id: "39", title: "Hardcore God", description: "100+ days alive.", next: ["40"] },
+  
+    { id: "40", title: "Legend of Realism", description: "All Hardcore Quests Completed.", next: [] },
+  ],
   };
   
