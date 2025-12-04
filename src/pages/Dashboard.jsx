@@ -12,25 +12,6 @@ function QuestNode({ data }) {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
   };
-  function flattenQuests(data) {
-    let result = [];
-  
-    if (data.intro) result.push(...data.intro);
-  
-    if (data.paths) {
-      Object.values(data.paths).forEach(path => {
-        result.push(...path);
-      });
-    }
-  
-    if (data.secrets) {
-      Object.values(data.secrets).forEach(section => {
-        if (Array.isArray(section)) result.push(...section);
-      });
-    }
-  
-    return result;
-  }  
 
   return (
     <motion.div
@@ -90,7 +71,7 @@ export default function Dashboard() {
   }, []);
 
   const handleComplete = async (id) => {
-    const questSet = flattenQuests(quests[difficulty.toUpperCase()]);
+    const questSet = quests[difficulty];
     const quest = questSet.find((q) => q.id === id);
     const newCompleted = [...completed, id];
     const newUnlocked = [...unlocked];
