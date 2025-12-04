@@ -90,7 +90,7 @@ export default function Dashboard() {
   }, []);
 
   const handleComplete = async (id) => {
-    const questSet = flattenQuests(quests[difficulty]);
+    const questSet = flattenQuests(quests[difficulty.toUpperCase()]);
     const quest = questSet.find((q) => q.id === id);
     const newCompleted = [...completed, id];
     const newUnlocked = [...unlocked];
